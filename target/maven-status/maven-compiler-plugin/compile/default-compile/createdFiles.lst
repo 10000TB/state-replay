@@ -1,0 +1,5 @@
+org/_10000tb/statereplay/HelloWorldBuilder.stapler
+org/_10000tb/statereplay/HelloWorldBuilder.class
+org/_10000tb/statereplay/HelloWorldBuilder$DescriptorImpl.class
+org/_10000tb/statereplay/HelloWorldBuilder/DescriptorImpl/doCheckName.stapler
+META-INF/annotations/hudson.Extension
