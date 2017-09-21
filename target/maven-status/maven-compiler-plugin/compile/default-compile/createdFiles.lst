@@ -1,5 +1,10 @@
+org/_10000tb/statereplay/SleepBuilder/DescriptorImpl/doCheckTime.stapler
+org/_10000tb/statereplay/SleepBuilder$DescriptorImpl.class
 org/_10000tb/statereplay/HelloWorldBuilder.stapler
 org/_10000tb/statereplay/HelloWorldBuilder.class
+org/_10000tb/statereplay/OnlineRootAction.class
 org/_10000tb/statereplay/HelloWorldBuilder$DescriptorImpl.class
+org/_10000tb/statereplay/SleepBuilder.stapler
+org/_10000tb/statereplay/SleepBuilder.class
 org/_10000tb/statereplay/HelloWorldBuilder/DescriptorImpl/doCheckName.stapler
 META-INF/annotations/hudson.Extension
