@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.10">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>3</queueId>
+  <timestamp>1506063065246</timestamp>
+  <startTime>1506063065248</startTime>
+  <result>SUCCESS</result>
+  <duration>62</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node(&quot;&quot;){
+    
+    
+    dhecho(&quot;hehe my first echo&quot;)
+}</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>16138355</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>4376996</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>40422361</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>15057685</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>7569128</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>8</iota>
+    <head>1:8</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
