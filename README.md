@@ -1,5 +1,5 @@
 # state-replay
-Yet another Jenkins plugin. This plugin helps you reserve the state before the first failing point, and let you replay the pipeline after you fix the failure. Isn't this great?
+One great workflow pipeline to rule them all. This Jenkins plugin helps you save the runtime state before the first failing point, and let you replay the pipeline from the failing point after you fix the failure. No need to waste hour(s) in replaying from beginning. Isn't this great?
 
 ## Motivation 
 >Skip this section to directly go for the juice.
