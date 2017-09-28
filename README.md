@@ -6,7 +6,6 @@ One great workflow pipeline to rule them all. This Jenkins plugin(<strong>WIP</s
 ## Motivation
 >For open sourced Jenkins distribution.
 
-TL;DR
 1. Current workflow pipeline doesn't support replaying from checkpoint.
 2. Heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed.
 3. Introduce such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
