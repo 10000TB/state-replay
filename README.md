@@ -3,13 +3,13 @@ One great workflow pipeline to rule them all. This Jenkins plugin(<strong>WIP</s
 
 ## Current Status
 What has been done:
->1. David Hu(@10000TB) has implemented the step (`statepoint`), which can be used in Groovy pipeline.
+1. implemented the step (`statepoint`), which can be used in Groovy pipeline.
 
 Whats next to finish the plugin:
->1. Implement replaying the checkpoint(s) before the last failure point(s).
+1. Implement replaying the checkpoint(s) before the last failure point(s).
 
 What is actually going on:
->1. David Hu(@10000TB) is working on figuring out how to implement the "runtime state saving and replay"
+1. David Hu(@10000TB) is working on figuring out how to implement the "runtime state saving and replay"
 
 ## Road Map
 1. Beta version 1.0: `statepoint` can be used to define checkpoint in Groovy pipeline. Such pipelines can replay from a checkpoint that is before the last failure point(s). (Note: If such pipelines have parallel steps, replay can happen from each corresponding checkpoint right before their last failure.)
