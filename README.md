@@ -18,6 +18,7 @@ What is actually going on:
 
 ## Motivation
 >For open sourced Jenkins distribution.
+
 TL;DR
 1. Current workflow pipeline doesn't support replaying from checkpoint.
 2. Heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed.
