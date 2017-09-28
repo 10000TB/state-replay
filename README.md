@@ -25,10 +25,6 @@ TL;DR
 2. Heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed.
 3. Introduce such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
 
-The actual story or my testimonials of there should be such plugin:
-
-When I was working on a long-running pipeline(it usually takes 6-8 hours to finish the pipeline) for my organization, it was extremely hard to replay the pipeline in a cost efficiently way if it fails after running for a few hours. For example, when the pipeline failed in the middle(say it failed after 3 hours of running), I then need to restart the pipeline from scratch and wait for 3 hours to reach last failure point after I resolve issue(s) (it could infra, pipeline syntax, or product code base). Imagine that the pipeline could fail anywhere in the middle, and you only 24 hours a day, then it becomes extremely hard to productionize the pipeline in a efficient way and in a short time period. At the same time, I attended 2017 Jenkins World Conference and was amazed by how much access you can have to Jenkins system through plugin, then I had the idea of writting plugin to solve the problem.
-
 ## Install
 (TODO: David Hu ) add installation instructions.
 
