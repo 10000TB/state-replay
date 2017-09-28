@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.10">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>5</queueId>
+  <timestamp>1506399469796</timestamp>
+  <startTime>1506399469797</startTime>
+  <result>SUCCESS</result>
+  <duration>1085</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>node(&quot;&quot;){
+    
+    // test echo step
+    dhecho(&quot;hehe my first echo&quot;)
+
+    //test pwd step
+    def x = dhpwd()
+    dhecho &quot;Current working directory: &quot;+x
+    
+    //test sleep
+    dhsleep 1
+    //
+    // test state point
+    statepoint &quot;build finished.&quot;
+}</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>26235450</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>5652286</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>64544659</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>20492055</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>7620584</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>12</iota>
+    <head>1:12</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.10">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>1</queueId>
+  <timestamp>1506116302655</timestamp>
+  <startTime>1506116302656</startTime>
+  <result>FAILURE</result>
+  <duration>485</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>node(&quot;&quot;){
+    
+    // test echo step
+    dhecho(&quot;hehe my first echo&quot;)
+
+    //test pwd step
+    def x = dhpwd()
+    dhecho &quot;Current working directory: &quot;+x
+    
+    //test sleep
+    dhsleep 100
+}</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>44184136</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>66060473</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>332683401</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>86332651</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>107411635</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>10</iota>
+    <head>1:10</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

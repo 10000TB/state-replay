@@ -3,11 +3,11 @@ Group-Id: org._10000tb
 Short-Name: state-replay
 Long-Name: state-replay Plugin
 Url: https://github.com/10000TB/state-replay
-Plugin-Version: 1.0-SNAPSHOT (private-2078d94f-xuehao.hu)
+Plugin-Version: 1.0-SNAPSHOT (private-e42d3aad-xuehao.hu)
 Hudson-Version: 2.7.3
 Jenkins-Version: 2.7.3
-Plugin-Dependencies: structs:1.6,workflow-step-api:2.12,workflow-api:2
- .16,mailer:1.18
+Plugin-Dependencies: mailer:1.18,workflow-step-api:2.12,workflow-api:2
+ .16,structs:1.6
 Plugin-Developers: 
 Libraries: /Users/xuehao.hu/Develop/state-replay/src/main/resources,/U
  sers/xuehao.hu/Develop/state-replay/target/classes

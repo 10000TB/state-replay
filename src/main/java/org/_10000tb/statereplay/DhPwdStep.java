@@ -62,7 +62,7 @@ public class DhPwdStep extends Step {
         }
     }
     // TODO use 1.652 use WorkspaceList.tempDir
-    public static FilePath tempDir(FilePath ws){
+    private static FilePath tempDir(FilePath ws){
         return ws.sibling(ws.getName() + System.getProperty(WorkspaceList.class.getName(), "@") + "tmp");
     }
 
@@ -79,7 +79,7 @@ public class DhPwdStep extends Step {
         @Override
         protected String run() throws Exception {
             FilePath cwd = getContext().get(FilePath.class);
-            return null;
+            return (this.tmp ? tempDir(cwd) : cwd).getRemote();
         }
 
         private static final long serialVersionUID = 1L;

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.10">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.model.InterruptedBuildAction>
+      <causes class="com.google.common.collect.ImmutableList">
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>anonymous</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+  </actions>
+  <queueId>1</queueId>
+  <timestamp>1506116794677</timestamp>
+  <startTime>1506116794679</startTime>
+  <result>ABORTED</result>
+  <duration>233751</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>ABORTED</result>
+    <script>node(&quot;&quot;){
+    
+    // test echo step
+    dhecho(&quot;hehe my first echo&quot;)
+
+    //test pwd step
+    def x = dhpwd()
+    dhecho &quot;Current working directory: &quot;+x
+    
+    //test sleep
+    dhsleep 100
+}</script>
+    <loadedScripts class="map"/>
+    <timings class="map">
+      <entry>
+        <string>flowNode</string>
+        <long>58147751</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>240006648</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>450809241</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>351328797</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>198917916</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>11</iota>
+    <head>1:11</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

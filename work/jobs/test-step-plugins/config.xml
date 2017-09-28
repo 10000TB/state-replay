@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.10">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.32">
+    <script>node(&quot;&quot;){
+    // test echo step
+    dhecho(&quot;hehe my first echo&quot;)
+
+    //test pwd step
+    def x = dhpwd()
+    dhecho &quot;\u001B[32m  Current working directory: \u001B[0m  &quot;+x
+    
+    //test sleep
+    dhsleep 1
+    //
+    // test state point
+    statepoint &quot;build finished.&quot;
+    
+    func1()
+    
+    func2()
+    
+    statepoint &quot;pipeline done.&quot;
+}
+
+def func1(){
+    dhecho &quot;func 1&quot;
+    statepoint &quot;finish func1.&quot;
+}
+
+def func2(){
+    dhecho &quot;func 2&quot;
+    statepoint &quot;finish func2&quot;
+}</script>
+    <sandbox>true</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>
