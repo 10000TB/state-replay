@@ -5,7 +5,7 @@ One great workflow pipeline to rule them all. This Jenkins plugin(<strong>WIP</s
 
 Done          | TODO          | Happening     |
 ------------- | ------------- | ------------- |
-1.Step (`statepoint`), which can be used in Groovy pipeline( but not doing anything, but printing in console) | 1.Implement state saving, replaying | 2.Figuring out how to implement the "runtime state saving and replay"
+1.Step (`statepoint`), which can be used in Groovy pipeline( but not doing anything, but printing in console)  |  1.Implement state saving, replaying  |  1.Figuring out how to implement the "runtime state saving and replay"
 
 ## Road Map
 
