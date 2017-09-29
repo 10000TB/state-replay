@@ -14,7 +14,7 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 
 ## Dev
 
-- [ ] Implement state saving, replaying  |  1.Figuring out how to implement the "runtime state saving and replay"
+- [ ] Implement the "runtime state saving and replay"
 - [x] Step (`statepoint`), which can be used in Groovy pipeline.
 
 ## Road Map
