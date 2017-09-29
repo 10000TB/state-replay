@@ -48,7 +48,9 @@ To build a plugin, simply run
 mvn install
 ``` 
 from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.  
-One more way to see how this plugin works, simply run:
+Then go to your Jenkins server, navigate to **Manage Jenkins -> Manage Jenkins**. After that, you can see an **Advanced** tab in current page. Afterwards, there will be an **Upload Plugin** section if you click the **Advanced** tab. You can then upload the built `.hpi` file, and Jenkins will recognize it and install this plugin for you. Then you are good to go!
+
+**One more way** to see how this plugin works, simply run:
 ```
 mvn hpi:run
 ```
