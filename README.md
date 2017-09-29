@@ -46,8 +46,15 @@ To build a plugin, simply run `mvn install` from repo root. Then, you will find 
 5. Push to your origin repository.
 6. Create a new PR.
 
+## Contributors
+
+* **David Hu** - *Initial work* - [10000TB](https://github.com/10000TB)
+
 ## Motivation
-(For open sourced Jenkins distribution) Current workflow pipeline doesn't support replaying from checkpoint. In addition, heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed. Moreover, introducing such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
+(For open sourced Jenkins distribution)
+* Current workflow pipeline doesn't support replaying from checkpoint. 
+* Heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed.
+* Introducing such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
 
 ## Liscense
 
