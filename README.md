@@ -77,6 +77,9 @@ You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with
 
 ## Liscense
 
+State-replay is under [MIT Liscense](https://github.com/10000TB/state-replay/blob/master/LICENSE), The terms of the license are as follows:
+
+```
 MIT License
 
 Copyright (c) 2017 Xuehao(David)  Hu
@@ -98,3 +101,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
