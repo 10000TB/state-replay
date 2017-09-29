@@ -3,7 +3,7 @@
 
 state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
 
-## Current Status
+## Dev
 
 - [ ] Implement state saving, replaying  |  1.Figuring out how to implement the "runtime state saving and replay"
 - [x] Step (`statepoint`), which can be used in Groovy pipeline( but not doing anything, but printing in console)
@@ -26,6 +26,9 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 ## Install
 
 To build a plugin, simply run `mvn install` from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.
+
+## Contributors
+
 
 ## Contribute
 
