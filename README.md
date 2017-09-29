@@ -25,10 +25,18 @@ Release       | Description   | Delivery      |
 3.sr-3.0 | A complete version: replay can happen from predefined checkpoint. | May 2018
 
 ## Install
-(TODO: David Hu ) add installation instructions.
+
+To build a plugin, simply run `mvn install` from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.
 
 ## Contribute
-(TODO: David Hu) add contribution guide.
+
+1. Fork the project & clone locally.
+2. Create an upstream remote and sync your local copy before you branch.
+3. Branch for each separate piece of work.
+4. Do the work, write <Strong>good commit messages</Strong>, and read the CONTRIBUTING file if there is one.
+> To see how this plugin works from some examples, simply run `mvn hpi:run`, and wait a while, you will have a development Jenkins server up with some example pipelines, checkout the pipeline script and build them to see how it works.
+5. Push to your origin repository.
+6. Create a new PR.
 
 ## Liscense
 
