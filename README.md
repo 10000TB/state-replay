@@ -56,7 +56,7 @@ You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with
 
 ## Contributors
 
-* **David Hu** - *Initial work* - [10000TB](https://github.com/10000TB)
+* **David Hu** - *Initiator and initial work on `statepoint`* - [10000TB](https://github.com/10000TB)
 
 ## Motivation
 (For open sourced Jenkins distribution)
