@@ -5,14 +5,13 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 
 ## Current Status
 
-Done          | TODO          | Happening     |
-------------- | ------------- | ------------- |
-1.Step (`statepoint`), which can be used in Groovy pipeline( but not doing anything, but printing in console)  |  1.Implement state saving, replaying  |  1.Figuring out how to implement the "runtime state saving and replay"
+- [ ] Implement state saving, replaying  |  1.Figuring out how to implement the "runtime state saving and replay"
+- [x] Step (`statepoint`), which can be used in Groovy pipeline( but not doing anything, but printing in console)
 
 ## Road Map
 
 <details>
-           <summary>sr- 1.0</summary>
+           <summary>sr-1.0</summary>
            <p>Beta version: `statepoint` can be used to define checkpoint in Groovy pipeline. Such pipelines can replay from a checkpoint that is before the last failure point(s). (Note: If such pipelines have parallel steps, replay can happen from each corresponding checkpoint right before their last failure.)</p>
 </details>
 <details>
