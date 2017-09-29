@@ -8,9 +8,18 @@
   
   
   
+  
 
 state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
-
+  
+  
+  
+[Install](#install)  
+[Road Map](#road-map)  
+[Current Development](#dev)  
+[How to Contribute](#contribute)  
+[Who do we need this plugin?](#motivation)  
+[Liscense](#liscense)  
 
 ## Dev
 
