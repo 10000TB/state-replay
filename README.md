@@ -27,9 +27,6 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 
 To build a plugin, simply run `mvn install` from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.
 
-## Contributors
-
-
 ## Contribute
 
 1. Fork the project & clone locally.
