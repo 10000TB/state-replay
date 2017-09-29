@@ -1,7 +1,7 @@
 # state-replay
 ![statereplay illustration](https://github.com/10000TB/state-replay/blob/master/src/main/resources/imgs/State-replay.png?raw=true)
 
-One great workflow pipeline to rule them all. This Jenkins plugin(<strong>WIP</strong>) will help you save the runtime state in workflow pipeline, and let you replay the pipeline from predefined checkpoint. No need to waste hour(s) in replaying from beginning.
+state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
 
 ## Motivation
 >For open sourced Jenkins distribution.
