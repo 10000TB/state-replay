@@ -34,7 +34,7 @@ To build a plugin, simply run `mvn install` from repo root. Then, you will find 
 2. Create an upstream remote and sync your local copy before you branch.
 3. Branch for each separate piece of work.
 4. Do the work, write <Strong>good commit messages</Strong>, and read the CONTRIBUTING file if there is one.
-> To see how this plugin works from some examples, simply run `mvn hpi:run`, and wait a while, you will have a development Jenkins server up with some example pipelines, checkout the pipeline script and build them to see how it works.
+> Simply run `mvn hpi:run` from GIT_ROOT to see how your change(s) behave on a Jenkins server.
 5. Push to your origin repository.
 6. Create a new PR.
 
