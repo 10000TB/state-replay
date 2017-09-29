@@ -1,7 +1,11 @@
-# state-replay
+# state-replay    [![Build Status](https://travis-ci.org/10000TB/state-replay.svg?branch=master)](https://travis-ci.org/10000TB/state-replay)    
+
+
 ![statereplay illustration](https://github.com/10000TB/state-replay/blob/master/src/main/resources/imgs/State-replay.png?raw=true)
 
+
 state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
+
 
 ## Dev
 
