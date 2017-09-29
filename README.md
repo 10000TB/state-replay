@@ -1,8 +1,13 @@
-# state-replay    [![Build Status](https://travis-ci.org/10000TB/state-replay.svg?branch=master)](https://travis-ci.org/10000TB/state-replay) [![CircleCI](https://circleci.com/gh/10000TB/state-replay/tree/master.svg?style=svg)](https://circleci.com/gh/10000TB/state-replay/tree/master) [![Gitter chat](https://badges.gitter.im/state-replay/gitter.png)](https://gitter.im/state-replay/gitter)
+# state-replay
 
-
-![statereplay illustration](https://github.com/10000TB/state-replay/blob/master/src/main/resources/imgs/State-replay.png?raw=true)
-
+[![Build Status](https://travis-ci.org/10000TB/state-replay.svg?branch=master)](https://travis-ci.org/10000TB/state-replay) [![CircleCI](https://circleci.com/gh/10000TB/state-replay/tree/master.svg?style=svg)](https://circleci.com/gh/10000TB/state-replay/tree/master) [![Gitter chat](https://badges.gitter.im/state-replay/gitter.png)](https://gitter.im/state-replay/gitter)
+  
+  
+  
+![statereplay illustration](https://github.com/10000TB/state-replay/blob/master/src/main/resources/imgs/State-replay.png?raw=true)  
+  
+  
+  
 
 state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
 
