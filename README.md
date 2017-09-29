@@ -11,10 +11,6 @@ Done          | TODO          | Happening     |
 
 ## Road Map
 
-Release       | Description   | Delivery      |
-------------- | ------------- | ------------- |
- | | END of 
-
 <details>
            <summary>1.sr- 1.0</summary>
            <p>Beta version: `statepoint` can be used to define checkpoint in Groovy pipeline. Such pipelines can replay from a checkpoint that is before the last failure point(s). (Note: If such pipelines have parallel steps, replay can happen from each corresponding checkpoint right before their last failure.)</p>
