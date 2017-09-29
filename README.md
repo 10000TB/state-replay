@@ -3,13 +3,6 @@
 
 state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined checkpoint(s).
 
-## Motivation
->For open sourced Jenkins distribution.
-
-1. Current workflow pipeline doesn't support replaying from checkpoint.
-2. Heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed.
-3. Introduce such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
-
 ## Current Status
 
 Done          | TODO          | Happening     |
@@ -37,6 +30,9 @@ To build a plugin, simply run `mvn install` from repo root. Then, you will find 
 > Simply run `mvn hpi:run` from GIT_ROOT to see how your change(s) behave on a Jenkins server.
 5. Push to your origin repository.
 6. Create a new PR.
+
+## Motivation
+(For open sourced Jenkins distribution) Current workflow pipeline doesn't support replaying from checkpoint. In addition, heavy product often needs long-running pipeline on CI side, and replay from beginning everytime wastes time in repeating steps that already passed. Moreover, introducing such checkpoint plugin, help debugging/development effiency of developing workflow pipeline in groovy.
 
 ## Liscense
 
