@@ -34,7 +34,16 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 
 ## Install
 
-To build a plugin, simply run `mvn install` from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.
+To build a plugin, simply run 
+```
+mvn install
+``` 
+from repo root. Then, you will find a `hpi` file under `./target/` called state-replay.hpi, which you can use to install on your Jenkins.  
+One more way to see how this plugin works, simply run:
+```
+mvn hpi:run
+```
+You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with plugin installed by default.
 
 ## Contribute
 
@@ -42,7 +51,6 @@ To build a plugin, simply run `mvn install` from repo root. Then, you will find 
 2. Create an upstream remote and sync your local copy before you branch.
 3. Branch for each separate piece of work.
 4. Do the work, write <Strong>good commit messages</Strong>, and read the CONTRIBUTING file if there is one.
-> Simply run `mvn hpi:run` from GIT_ROOT to see how your change(s) behave on a Jenkins server.
 5. Push to your origin repository.
 6. Create a new PR.
 
