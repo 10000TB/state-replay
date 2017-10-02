@@ -5,7 +5,7 @@
       <string>7</string>
     </parentIds>
     <id>8</id>
-    <descriptorId>org._10000tb.statereplay.DhSleepStep</descriptorId>
+    <descriptorId>experimental.DhSleepStep</descriptorId>
   </node>
   <actions>
     <org.jenkinsci.plugins.workflow.support.actions.LogActionImpl>

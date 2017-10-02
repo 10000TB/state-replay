@@ -21,23 +21,24 @@
     dhsleep 1
     //
     // test state point
-    statepoint &quot;build finished.&quot;
-    
+    //statepoint stateMessage:&quot;build finished.&quot;, isVolatile: True, remoteOperation: True, retry:1
+    statepoint remoteOperation: true, retry: 3, stateMessage: &apos;Built Release&apos;, volatileOperation: true
+
     func1()
     
     func2()
     
-    statepoint &quot;pipeline done.&quot;
+    //statepoint &quot;pipeline done.&quot;
 }
 
 def func1(){
     dhecho &quot;func 1&quot;
-    statepoint &quot;finish func1.&quot;
+    //statepoint &quot;finish func1.&quot;
 }
 
 def func2(){
     dhecho &quot;func 2&quot;
-    statepoint &quot;finish func2&quot;
+    //statepoint &quot;finish func2&quot;
 }</script>
     <sandbox>true</sandbox>
   </definition>

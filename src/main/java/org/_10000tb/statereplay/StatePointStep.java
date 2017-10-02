@@ -8,6 +8,7 @@ import jenkins.util.SystemProperties;
 import org.jenkinsci.plugins.workflow.FilePathUtils;
 import org.jenkinsci.plugins.workflow.steps.*;
 import org.kohsuke.stapler.DataBoundConstructor;
+import org.kohsuke.stapler.DataBoundSetter;
 
 import javax.annotation.Nonnull;
 import java.io.File;
@@ -16,35 +17,72 @@ import java.lang.reflect.Array;
 import java.util.Collections;
 import java.util.Set;
 
+ /**  statepoint stateMessage:"<State message>",
+  *              isVolatile:<VOLATILE: boolean>,
+  *              remoteOperation:<REMOTEOPERATION: boolean>,
+  *              retry: <NUMBEROFRETRY: INT>
+  */
 public class StatePointStep extends Step{
-    private final String stateMessage;
+     /*
+     * A message indicating what has been done since last statepoint.
+     * */
+     private final String stateMessage;
+     /*
+     * A boolean indicating if the execution step(s) since last statepoint volatile or not.
+     * */
+     private boolean volatileOperation;
+     /*
+     * A boolean indicating if the execution step(s) since last statepoint is pure remote operation or not.
+     * */
+     private boolean remoteOperation;
+     /*
+     * Number of retry that shall be attempted if there is an error occurred since last statepoint.
+     *
+     * Note: Use this when you are sure the execution steps in that scope are error prone, and highly likely
+     *       need retries.
+     * */
+     private int retry;
 
     /*
     *  Have a statepoint directory store in JENKINS_HOME directory.
     * */
     @DataBoundConstructor
     public StatePointStep(String stateMessage) { this.stateMessage = stateMessage; }
-
     public String getStateMessage() { return this.stateMessage; }
+    @DataBoundSetter
+    public void setVolatileOperation(boolean volatileOperation) {
+         this.volatileOperation = volatileOperation;
+    }
+    @DataBoundSetter
+    public void setRemoteOperation(boolean remoteOperation) {
+         this.remoteOperation = remoteOperation;
+    }
+    @DataBoundSetter
+    public void setRetry(int retry){
+        this.retry = retry;
+    }
+    public boolean getVolatileOperation() { return this.volatileOperation; }
+    public boolean getRemoteOperation () { return this.remoteOperation; }
+    public int getRetry() { return this.retry; }
 
     @Override public StepExecution start(StepContext stepContext) throws Exception {
-        Execution execution = new Execution(this.stateMessage, stepContext);
+        Execution execution = new Execution(this, stepContext);
         return execution;
     }
 
     public static final class Execution extends SynchronousStepExecution<Void> {
-        private transient final String stateMessage;
+        private transient final StatePointStep step;
         private String jenkinsHome;
         private String currentJobName;
         private String currentJobStatesHome;
         private String currentBuildNumber;
         private String currentBuildHome;
 
-        protected Execution(String stateMessage, StepContext context) throws IOException, InterruptedException {
-            super(context); this.stateMessage = stateMessage;
+        protected Execution(StatePointStep step, StepContext context) throws IOException, InterruptedException {
+            super(context);
+            this.step = step;
             this.jenkinsHome = SystemProperties.getString("JENKINS_HOME");
             this.currentJobName = context.get(EnvVars.class).get("JOB_NAME");
-            //this.currentJobName = env.get("JOB_NAME");
             this.currentBuildNumber = context.get(EnvVars.class).get("BUILD_NUMBER");
 
             this.currentJobStatesHome = this.jenkinsHome + ProductionConfig.JENKINS_HOME_TO_JOB_CONNECTION_PATH + this.currentJobName + "/states";
@@ -56,9 +94,18 @@ public class StatePointStep extends Step{
         }
 
         @Override protected Void run() throws Exception {
-            getContext().get(TaskListener.class).getLogger().println("statepoint check: "+this.stateMessage);
+            getContext().get(TaskListener.class).getLogger().println("statepoint check: "+this.step.getStateMessage());
+            getContext().get(TaskListener.class).getLogger().println("statepoint isVolatile: "+this.step.getVolatileOperation());
+            getContext().get(TaskListener.class).getLogger().println("statepoint isRemoteOperation: "+this.step.getRemoteOperation());
+            getContext().get(TaskListener.class).getLogger().println("statepoint getRetry: "+this.step.getRetry());
+//
+//            getContext().get(TaskListener.class).getLogger().println("current thread stack trace:\n"+Thread.currentThread().getStackTrace());
+//            getContext().get(TaskListener.class).getLogger().println("current thread name:\n"+Thread.currentThread().getName());
+//            getContext().get(TaskListener.class).getLogger().println("current thread classLoader:\n"+Thread.currentThread().getContextClassLoader());
+//            getContext().get(TaskListener.class).getLogger().println("current thread Id:\n"+Thread.currentThread().getId());
+//            getContext().get(TaskListener.class).getLogger().println("current thread thread group:\n"+Thread.currentThread().getThreadGroup());
+//            getContext().get(TaskListener.class).getLogger().println("current toString:\n"+Thread.currentThread().toString());
 
-            getContext().get(TaskListener.class).getLogger().println("current stack trace:\n"+Thread.currentThread().getStackTrace());
 
             return null;
         }

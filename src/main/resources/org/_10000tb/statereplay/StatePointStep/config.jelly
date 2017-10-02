@@ -28,4 +28,13 @@ THE SOFTWARE.
     <f:entry field="stateMessage" title="StateMessage">
         <f:textbox/>
     </f:entry>
+    <f:entry field="volatileOperation" title="Are steps content volatile?" description="If checked, it will indicate volatile steps.">
+        <f:checkbox/>
+    </f:entry>
+    <f:entry field="remoteOperation" title="Are steps content pure remote operation?" description="If checked, it will indicate steps are remote, no need to hande storage.">
+        <f:checkbox/>
+    </f:entry>
+    <f:entry field="retry" title="Number of retries for the scope from last statepoint to current if there is a failure.">
+        <f:textbox/>
+    </f:entry>
 </j:jelly>
