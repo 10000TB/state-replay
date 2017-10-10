@@ -59,7 +59,7 @@ You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with
 ## Examples
 Some example usage would be like following once this plugin is finished. In addition, there will be a best-practice published for taking advantage of this plugin.  
 
-0.**statepoint signature**  
+0.  **statepoint signature**  
 You can always use pipeline syntax generator to find out how to make a step call. But list here anyway for reference in case you just want it.  
 ```
 statepoint stateMessage:"<State message>",
@@ -68,7 +68,7 @@ statepoint stateMessage:"<State message>",
            retry: <NUMBEROFRETRY: INT>
 ```
 
-1.**A simple example proving the concept.**
+1.  **a simple example proving the concept.**
 ```
 node("") {
     stage("preparation"){
@@ -87,7 +87,7 @@ node("") {
 ```
 If any of the step failed, successful state, which was saved per build per pipeline, will be picked up when replay. For example, if "Push to artifactory" failed due to network issue, you can simply replay from "Build done" statepoint.  
   
-2.**Using retry option to retry known fragile steps:**  
+2.  **using retry option to retry known fragile steps:**  
 There are usually some fragile steps some where in pipeline, instead of using `retry` step, we provide a retry option to automatically replay all steps from last state point. Just so it looks neater and more beautiful in code.
 ```
 node("") {
