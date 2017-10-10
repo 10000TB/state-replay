@@ -61,7 +61,7 @@ You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with
 1. Fork the project & clone locally.
 2. Create an upstream remote and sync your local copy before you branch.
 3. Branch for each separate piece of work.
-4. Do the work, write <Strong>good commit messages</Strong>, and read the CONTRIBUTING file if there is one.
+4. Do the work, write <Strong>good commit messages</Strong>.
 5. Push to your origin repository.
 6. Create a new PR.
 
