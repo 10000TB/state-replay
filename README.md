@@ -23,8 +23,8 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
 
 ## Dev
 - [ ] The `replay` will be first implemented in a simply way (For each `statepoint`, save variables name and values before, replay will reconstruct a temp workflow execution context, and workflow pipeline will start from there with those finished variables and values from last execution).
-- [ ] Under the hoods, steps in workflow pipeline are parsed and run one by one in single thread(multiple threads for `parallel` steps), figure out what is the API end point for accessing raw pipeline steps.
-[See full dev checklist](https://github.com/10000TB/state-replay/DEV.md)
+- [ ] Under the hoods, steps in workflow pipeline are parsed and run one by one in single thread(multiple threads for `parallel` steps), figure out what is the API end point for accessing raw pipeline steps.  
+[See full dev checklist](https://github.com/10000TB/state-replay/blob/master/DEV.md)
 
 ## Road Map
 
