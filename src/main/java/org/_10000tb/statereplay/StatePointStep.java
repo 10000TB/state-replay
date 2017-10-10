@@ -98,18 +98,9 @@ public class StatePointStep extends Step{
             getContext().get(TaskListener.class).getLogger().println("statepoint isVolatile: "+this.step.getVolatileOperation());
             getContext().get(TaskListener.class).getLogger().println("statepoint isRemoteOperation: "+this.step.getRemoteOperation());
             getContext().get(TaskListener.class).getLogger().println("statepoint getRetry: "+this.step.getRetry());
-//
-//            getContext().get(TaskListener.class).getLogger().println("current thread stack trace:\n"+Thread.currentThread().getStackTrace());
-//            getContext().get(TaskListener.class).getLogger().println("current thread name:\n"+Thread.currentThread().getName());
-//            getContext().get(TaskListener.class).getLogger().println("current thread classLoader:\n"+Thread.currentThread().getContextClassLoader());
-//            getContext().get(TaskListener.class).getLogger().println("current thread Id:\n"+Thread.currentThread().getId());
-//            getContext().get(TaskListener.class).getLogger().println("current thread thread group:\n"+Thread.currentThread().getThreadGroup());
-//            getContext().get(TaskListener.class).getLogger().println("current toString:\n"+Thread.currentThread().toString());
-
 
             return null;
         }
-
         private static final long serialVersionUID = 1L;
     }
 
