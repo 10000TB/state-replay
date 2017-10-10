@@ -17,11 +17,6 @@ import java.lang.reflect.Array;
 import java.util.Collections;
 import java.util.Set;
 
- /**  statepoint stateMessage:"<State message>",
-  *              isVolatile:<VOLATILE: boolean>,
-  *              remoteOperation:<REMOTEOPERATION: boolean>,
-  *              retry: <NUMBEROFRETRY: INT>
-  */
 public class StatePointStep extends Step{
      /*
      * A message indicating what has been done since last statepoint.
