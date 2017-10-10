@@ -60,7 +60,9 @@ You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with
 Some example usage would be like following once this plugin is finished. In addition, there will be a best-practice published for taking advantage of this plugin.  
 
 0.  **statepoint signature**  
-You can always use pipeline syntax generator to find out how to make a step call. But list here anyway for reference in case you just want it.  
+You can always use pipeline syntax generator to find out how to make a step call like following. 
+![syntaxx generator](https://github.com/10000TB/state-replay/blob/master/src/main/resources/imgs/syntax_generate.png)
+But list here anyway for reference in case you just want it.  
 ```
 statepoint stateMessage:"<State message>",
            isVolatile:<VOLATILE: boolean>,
