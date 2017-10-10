@@ -56,6 +56,57 @@ mvn hpi:run
 ```
 You will have a local Jenkins server up at `http://localhost:8080/jenkins/` with plugin installed by default.
 
+## Examples
+Some example usage would be like following once this plugin is finished. In addition, there will be a best-practice published for taking advantage of this plugin.  
+
+0.**statepoint signature**  
+You can always use pipeline syntax generator to find out how to make a step call. But list here anyway for reference in case you just want it.  
+```
+statepoint stateMessage:"<State message>",
+           isVolatile:<VOLATILE: boolean>,
+           remoteOperation:<REMOTEOPERATION: boolean>,
+           retry: <NUMBEROFRETRY: INT>
+```
+
+1.**A simple example proving the concept.**
+```
+node("") {
+    stage("preparation"){
+        // env preparation steps.
+    }
+    statepoint "env preparation done."
+    stage("Build"){
+        // some build steps.
+    }
+    statepoint "Build done"
+    stage("Push to artifactory"){
+        // push to artifactory.
+    }
+    statepoint "Pushed to artifactory."
+}
+```
+If any of the step failed, successful state, which was saved per build per pipeline, will be picked up when replay. For example, if "Push to artifactory" failed due to network issue, you can simply replay from "Build done" statepoint.  
+  
+2.**Using retry option to retry known fragile steps:**  
+There are usually some fragile steps some where in pipeline, instead of using `retry` step, we provide a retry option to automatically replay all steps from last state point. Just so it looks neater and more beautiful in code.
+```
+node("") {
+    .... // some pipeline steps
+    stage("Build"){
+        // some build steps.
+    }
+    statepoint "Build done"
+    stage("Push to artifactory"){
+        // push to artifactory.
+    }
+    statepoint retry: 3, stateMessage: 'Push to artifactory'
+    ... // some more pipeline steps.
+}
+```
+If due to fleakness in the stage of "Push to artifactory", this plugin will automatically replay steps after "Build done" before marking it as failure. It will proceed to following steps if any of the retry succeeds.
+
+(todo:10000tb) add more examples.
+
 ## Contribute
 
 1. Fork the project & clone locally.
