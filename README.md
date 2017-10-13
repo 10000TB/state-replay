@@ -104,9 +104,6 @@ If due to fleakness in the stage of "Push to artifactory", this plugin will auto
 5. Push to your origin repository.
 6. Create a new PR.
 
-## Contributors
-
-
 ## Motivation
 (For open sourced Jenkins distribution)
 * Current workflow pipeline doesn't support replaying from checkpoint. 
