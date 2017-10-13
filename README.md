@@ -16,7 +16,6 @@ state-replay(<strong>WIP</strong>) helps you replay pipeline from predefined che
   
 [Install](#install)  
 [Examples](#examples)  
-[Road Map](#road-map)  
 [Current Development](#dev)  
 [How to Contribute](#contribute)  
 [Why do we need this plugin?](#motivation)  
